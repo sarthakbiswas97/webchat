@@ -18,7 +18,7 @@ model User {
   username String @unique
   password String
   room Room[]
-  RoomJoinee RoomJoinee[]
+  RoomJoined RoomJoinee[]
 }
 
 model Room {
@@ -26,7 +26,7 @@ model Room {
   title String @unique
   userId String
   user User @relation(fields: [userId], references: [id])
-  RoomJoinee RoomJoinee[]
+  RoomJoined RoomJoinee[]
 }
 
 model RoomJoinee {

@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "websocket",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -15,16 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "@repo/db": "*",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.20.3",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "jsonwebtoken": "^9.0.2",
-    "typescript": "^5.6.3"
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/express": "^5.0.0",
-    "@types/jsonwebtoken": "^9.0.7"
+    "@types/ws": "^8.5.13"
   }
 }

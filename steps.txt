@@ -1,0 +1,24 @@
+-> user will signin/signup
+-> will have two options 
+    1. join any existing room
+    2. create a new room
+-> if creates new room will become the host and will have all the authority 
+
+-> if joins existing room will become member
+
+
+-> the host will be able to create video meets
+
+
+Each Post can have multiple categories
+each user can have multiple rooms
+
+Each Category can have multiple posts
+each room can have multiple users
+
+
+need to join both the tables 
+many-to-many relation 
+
+
+

@@ -14,7 +14,26 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
+  id String @id @default(cuid())
   username String @unique
   password String
+  room Room[]
+  RoomJoinee RoomJoinee[]
 }
+
+model Room {
+  id String @id @default(cuid())
+  title String @unique
+  userId String
+  user User @relation(fields: [userId], references: [id])
+  RoomJoinee RoomJoinee[]
+}
+
+model RoomJoinee {
+  user User @relation(fields: [userId], references: [id])
+  userId String
+  room Room @relation(fields: [roomId], references: [id])
+  roomId String
+  @@id([userId, roomId])
+}
+

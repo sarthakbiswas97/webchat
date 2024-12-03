@@ -1,18 +1,14 @@
 import express from "express";
-import prisma from "@repo/db"
+import authRoutes from "./routes/authRoutes.js"
+import roomRoutes from "./routes/roomRoutes.js"
 
 const app = express();
 app.use(express.json());
 
 
-app.get("/users",async (req,res)=>{
 
-    const users = await prisma.user.findMany
-
-
-})
-
-
+app.use("/api/v1",authRoutes);
+app.use("/api/v1",roomRoutes)
 
 
 
